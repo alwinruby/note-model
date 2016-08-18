@@ -25,3 +25,21 @@ function testNoNoteListView(){
   }
 }
 testNoNoteListView();
+
+function testOutputTwenty() {
+  var list = new NoteList();
+
+  console.log("Output20Characters test running");
+  list.addNote("This is a string which must have more than 20");
+  // list.addNote("This is shorter");
+  // list.addNote("12345678901234567890");
+  var noteListView = new NoteListView(list.displayList());
+  var web20String = noteListView.outputTwenty();
+  if (web20String === "<ul><li><div>This is a string wh</div></li></ul>") {
+    console.log("Restricts to 20 characters");
+  }
+  else {
+    console.log("NOT restricted to 20 characters");
+  }
+}
+testOutputTwenty();
