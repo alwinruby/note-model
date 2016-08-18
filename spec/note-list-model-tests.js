@@ -13,7 +13,7 @@ function testNoteListDisplay(){
   if(list[2].text === "three"){
     console.log("3");
   }
-};
+}
 testNoteListDisplay();
 
 function checkNoteInList() {
@@ -28,6 +28,21 @@ function checkNoteInList() {
   }
 }
 checkNoteInList();
+
+function checkNoteIdInList(){
+  var noteId1 = "noteId1";
+  var noteId2 = "noteId2";
+  var noteList = new NoteList();
+  noteList.addNote(noteId1);
+  noteList.addNote(noteId2);
+  if(noteList.notes[1].id === 1){//change to 0 to test for noteId1
+    console.log("New note has been assigined ID of 1");
+  }
+  else {
+    console.log("No id assigined");
+  }
+}
+checkNoteIdInList();
 
 function checkNotesInList() {
   var note2 = "note2";

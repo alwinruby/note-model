@@ -7,9 +7,11 @@
     return this.notes;
   };
 
-  NoteList.prototype.addNote = function(note){
-    this.notes.push(new Note(note));
-  }
+  NoteList.prototype.addNote = function(text){
+    var note = new Note(text);
+    note.id = this.notes.length;
+    this.notes.push(note);
+  };
 
   exports.NoteList = NoteList;
 
