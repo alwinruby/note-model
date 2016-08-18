@@ -6,8 +6,9 @@
 
   NoteListView.prototype.outputWeb = function() {
     var string ="";
-    if(this.list.length !==0) {
-      this.list.forEach(function(note){
+    var list1 = this.list;
+    if(list1.length !==0) {
+      list1.forEach(function(note){
         string +="<li><div>"+note.NoteCanStoreText()+"</div></li>";
       });
         string = "<ul>" + string + "</ul>";

@@ -16,14 +16,6 @@ function testNoteListDisplay(){
 };
 testNoteListDisplay();
 
-// function testAddNoteToList() {
-//   var text = "Hello, world!";
-//   var noteList = new NoteList();
-//   noteList.addNote(text);
-//
-// }
-// testAddNoteToList();
-
 function checkNoteInList() {
   var note1 = "note1";
   var noteList = new NoteList();
