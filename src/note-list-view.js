@@ -24,8 +24,7 @@
       list1.forEach(function(note) {
         var stringNote;
         stringNote = note.NoteCanStoreText();
-        stringNote = stringNote.substring(0,19);
-        console.log("stringNote = " + stringNote);
+        stringNote = stringNote.substring(0,20);
         stringLimit20 +="<li><div>" + stringNote + "</div></li>";
       });
         stringLimit20 = "<ul>" + stringLimit20 + "</ul>";

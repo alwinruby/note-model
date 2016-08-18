@@ -5,7 +5,6 @@
   }
 
   Note.prototype.NoteCanStoreText = function(){
-    console.log("note can store text");
     return this.text;
   };
 
