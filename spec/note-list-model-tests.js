@@ -30,13 +30,13 @@ function checkNoteInList() {
 checkNoteInList();
 
 function checkNoteIdInList(){
-  var noteId1 = "noteId1";
-  var noteId2 = "noteId2";
+  var note = new Note();
+  note.resetId();
   var noteList = new NoteList();
-  noteList.addNote(noteId1);
-  noteList.addNote(noteId2);
-  if(noteList.notes[1].id === 1){//change to 0 to test for noteId1
-    console.log("New note has been assigined ID of 1");
+  noteList.addNote();
+  noteList.addNote();
+  if(noteList.notes[0].id === 0){//change to 0 to test for noteId1
+    console.log("New note has been assigined ID of 0");
   }
   else {
     console.log("No id assigined");
@@ -58,3 +58,18 @@ function checkNotesInList() {
   }
 }
 checkNotesInList();
+
+function returnsNoteById(){
+  var note = new Note();
+  note.resetId();
+  var noteList = new NoteList();
+  noteList.addNote("zero");
+  noteList.addNote("one");
+  if (noteList.getNoteFromId(1).text === "one"){
+    console.log("gets note with the specific id");
+  }
+  else {
+    console.log("does not get the note with specific id");
+  }
+}
+returnsNoteById();

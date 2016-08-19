@@ -9,7 +9,7 @@
     var list1 = this.list;
     if(list1.length !==0) {
       list1.forEach(function(note){
-        string +="<li><div>"+note.NoteCanStoreText()+"</div></li>";
+        string +="<li><div><a href='#" + note.id +"'>"  +note.NoteCanStoreText().substring(0,20)+"</a></div></li>";
       });
         string = "<ul>" + string + "</ul>";
     }

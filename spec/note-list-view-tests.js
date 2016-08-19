@@ -1,10 +1,13 @@
 function testNoteListView(){
   var list = new NoteList();
+  var note = new Note();
+  note.resetId();
   list.addNote("I am Alwin.");
   list.addNote("I am Noby.");
   var noteListView = new NoteListView(list.displayList());
   var webString = noteListView.outputWeb();
-  if (webString === "<ul><li><div>I am Alwin.</div></li><li><div>I am Noby.</div></li></ul>"){
+  console.log(webString);
+  if (webString === "<ul><li><div><a href='#0'>I am Alwin.</a></div></li><li><div><a href='#1'>I am Noby.</a></div></li></ul>"){
     console.log("notes were successfully converted into a html string.");
   }
   else {
