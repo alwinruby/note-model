@@ -11,7 +11,7 @@
     var note = new Note(text);
     note.id = this.notes.length;
     this.notes.push(note);
-  };
+  }; 
 
   exports.NoteList = NoteList;
 
